@@ -8,8 +8,7 @@ before_install:
 script:
  - docker run adityasharma369/image
 
-
-dockerpush: dockerbuild
+deploy:
  echo "$(DOCKER_PASSWORD)" | docker login -u "$(DOCKER_USERNAME)" --password-stdin
  docker tag $(DOCKER_IMAGE_NAME) pzelnip/$(DOCKER_IMAGE_NAME):latest
  docker push pzelnip/$(DOCKER_IMAGE_NAME)
