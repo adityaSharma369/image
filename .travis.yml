@@ -10,8 +10,8 @@ script:
 
 script:
  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
- - docker tag adityasharma369/image pzelnip/adityasharma369/image:latest
- - docker push pzelnip/adityasharma369/image
+ - docker tag adityasharma369/image adityasharma369/image:latest
+ - docker push adityasharma369/image
 
 # deploy:
 #  provider: elasticbeanstalk
