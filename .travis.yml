@@ -9,7 +9,7 @@ script:
  - docker run adityasharma369/image
 
 script:
- - echo "$(DOCKER_PASSWORD)" | docker login -u "$(DOCKER_USERNAME)" --password-stdin
+ - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
  - docker tag adityasharma369/image pzelnip/adityasharma369/image:latest
  - docker push pzelnip/adityasharma369/image
 
